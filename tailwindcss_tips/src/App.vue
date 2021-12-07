@@ -3,7 +3,12 @@
     <h1>Tailwind CSS TIPS</h1>
     <div class="h-screen overflow-y-auto" style="scroll-snap-type: y mandatory;">
       <div :class="[color, 'w-full h-screen']" style="scroll-snap-align: start;scroll-snap-stop: always;" v-for="color in colors">
-      
+        <div class="flex flex-wrap">
+          <template v-for="color2 in colors">
+            <div :class="[color2, 'w-10 h-10 m-2 hover:m-0 hover:w-14 hover:h-14 transition-all transition-slowest ease']" >
+            </div>
+          </template>
+        </div>
       </div>
     </div>
   </div>
